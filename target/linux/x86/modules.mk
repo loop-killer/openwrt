@@ -119,7 +119,7 @@ $(eval $(call KernelPackage,it87-wdt))
 define KernelPackage/itco-wdt
   SUBMENU:=$(OTHER_MENU)
   TITLE:=Intel iTCO Watchdog Timer
-  DEPENDS:=@TARGET_x86
+  DEPENDS:=@TARGET_x86 +kmod-i2c-i801
   KCONFIG:=\
 	CONFIG_ITCO_WDT \
 	CONFIG_ITCO_VENDOR_SUPPORT=y \
